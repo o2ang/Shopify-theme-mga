@@ -1,0 +1,164 @@
+.mga-header,
+.toolbar {
+  .page-width {
+    padding: 0 130px;
+    @include mq {
+      padding: 0 17px;
+    }
+  }
+  .site-nav__link {
+    @include mq {
+      padding: 0 5px;
+    }
+
+    .icon {
+      @include mq {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+}
+
+.header-layout--left-right .site-navigation {
+  padding-left: 10px;
+  flex: 1;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+#NavDrawer {
+  .collapsible-trigger__icon--circle {
+    border: none !important;
+  }
+  button[aria-labelledby="Label-collections-all1"] {
+    border: none !important;
+  }
+  .drawer__scrollable {
+    padding-bottom: 200px;
+  }
+}
+
+//
+
+.drawer-selectors {
+  //border: 1px solid #f00;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+
+  .multi-selectors__item {
+    margin: 0;
+
+    h2 {
+      display: none;
+    }
+
+    button {
+      vertical-align: top;
+    }
+    .disclosure-list__label {
+      font-size: 13px !important;
+    }
+    .icon {
+      top: 13px;
+    }
+
+    #CurrencyList-toolbar {
+      width: 200px;
+    }
+
+    .disclosure-list {
+      .disclosure-list__label {
+        color: #000 !important;
+      }
+    }
+    a:not(.btn) {
+    }
+  }
+}
+
+.site-nav__dropdown-link {
+  background: none !important;
+  color: #fff !important;
+  font-size: 14px !important;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.megamenu a {
+  font-family: "Noto Sans JP", system-ui, "sans-serif";
+}
+
+html[lang="en"] {
+  .megamenu a {
+    font-family: "Lato", sans-serif;
+  }
+}
+
+.megamenu .grid__item .h5 {
+  letter-spacing: 0.1em;
+}
+.megamenu .grid__item:first-child .h5 {
+  border-bottom: 1px solid #000 !important;
+}
+
+.mobile-nav__link--top-level {
+  @include mq {
+    font-size: 25px !important;
+  }
+}
+
+.mobile-nav__item--1 {
+}
+.mobile-nav__item--2 {
+  border-bottom: 1px solid #888;
+  margin: 0 20px;
+  .collapsible-trigger__icon {
+    margin-right: 0 !important;
+  }
+  .mobile-nav__link {
+    @include mq {
+      font-size: 14px !important;
+      font-weight: 700 !important;
+      display: block;
+      padding-left: 20px;
+    }
+  }
+}
+
+.mobile-nav__item--3 {
+  border-bottom: 1px solid #333;
+  //padding-left: 60px;
+  //margin: 0 20px;
+  &:first-child {
+    border-top: 1px solid #333;
+  }
+
+  .mobile-nav__link {
+    font-weight: 400;
+    @include mq {
+      font-size: 14px !important;
+      display: block;
+      padding-left: 40px;
+      font-weight: 400 !important;
+    }
+  }
+}
+
+html[lang="ja"] {
+  .mobile-nav__item--2 {
+    .mobile-nav__link {
+      font-family: "Noto Sans JP", system-ui !important;
+      font-weight: 600 !important;
+    }
+  }
+
+  .mobile-nav__item--3 {
+    .mobile-nav__link {
+      font-weight: 400 !important;
+    }
+  }
+}

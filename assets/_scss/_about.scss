@@ -1,0 +1,423 @@
+.mga-page-about {
+  overflow: hidden;
+
+  figure {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__ttl {
+    font-family: "Noto Serif JP", serif;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 1.79;
+    margin-bottom: 55px;
+    @include mq {
+      margin-bottom: 40px;
+      font-size: 20px;
+    }
+  }
+
+  &-nav {
+    &--right {
+      display: flex;
+
+      justify-content: flex-end;
+      gap: 10px;
+    }
+    &--center {
+      display: flex;
+
+      justify-content: center;
+      gap: 10px;
+    }
+  }
+
+  &-youtube-wrap {
+    @include aspect(560, 315, iframe);
+    width: 100%;
+  }
+  &-1 {
+    padding: 130px 50px 150px;
+
+    @include mq {
+      width: 100%;
+      padding: 60px 0 85px;
+    }
+
+    &-1 {
+      margin-bottom: 40px;
+      @include mq {
+        margin-bottom: 50px;
+      }
+      &-p {
+        line-height: 3.57;
+        font-family: "Noto Sans JP", system-ui;
+        font-size: 14px;
+        @include mq {
+          line-height: 2.5;
+        }
+      }
+      &-layout {
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+        @include mq {
+          display: block;
+        }
+      }
+      &-content {
+        flex: 1;
+      }
+      &-fig {
+        width: px2per(700, 1500);
+        margin-right: -100px;
+
+        @include mq {
+          margin: 0;
+          width: 100%;
+
+          overflow: auto;
+        }
+      }
+    }
+    &-2 {
+      margin-bottom: 175px;
+      position: relative;
+      background: url(about-txt-philosophy.png) no-repeat;
+      background-size: px2per(570, 1240) auto;
+      background-position: 120px 70px;
+      @include mq {
+        background-size: px2vw_sp(283) auto;
+        background-position: 105% 50px;
+        margin: 0 -17px 70px;
+        padding: 0 17px;
+      }
+      &-p {
+        line-height: 2.86;
+        font-family: "Noto Sans JP", system-ui;
+        font-size: 14px;
+        @include mq {
+          line-height: 2.14;
+        }
+      }
+      &-layout {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row-reverse;
+        gap: 90px;
+        position: relative;
+        z-index: 2;
+
+        @include mq {
+          display: block;
+        }
+      }
+      &-content {
+        flex: 1;
+      }
+      &-fig {
+        padding: 0;
+        margin: 220px 0 0;
+
+        width: px2per(460, 1240);
+        @include mq {
+          width: px2per(460, 750);
+          margin: 0 auto 75px;
+        }
+
+        &.pc {
+          @include mq {
+            display: none;
+          }
+        }
+        &.sp {
+          display: none;
+          @include mq {
+            display: block;
+          }
+        }
+      }
+
+      &-list {
+        margin: 0 0 70px 20px;
+        li {
+          margin-bottom: 20px;
+          line-height: 1.8;
+          font-size: 14px;
+          font-family: "Noto Sans JP", system-ui;
+        }
+      }
+    }
+    &-3 {
+      padding: 0 54px;
+      @include mq {
+        padding: 0;
+      }
+    }
+  }
+  &-2 {
+    background: #000;
+    color: #fff;
+    padding: 60px 0;
+    @include mq {
+      padding: 75px 0 85px;
+    }
+    &-inner {
+      display: flex;
+      align-items: center;
+      gap: px2per(175, 900);
+      max-width: 900px;
+      margin: 0 auto;
+
+      @include mq {
+        flex-direction: column-reverse;
+      }
+    }
+
+    &-ttl-1 {
+      font-family: "Lato", sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      margin-bottom: 25px;
+      @include mq {
+        font-size: 25px;
+        margin-bottom: 15px;
+      }
+    }
+
+    &-ttl-2 {
+      margin-bottom: 30px;
+      @include mq {
+      }
+      .en {
+        display: block;
+        font-weight: 700;
+        font-size: 18px;
+        font-family: "Lato", sans-serif;
+        margin-bottom: 5px;
+        @include mq {
+          font-size: 16px;
+        }
+      }
+      .jp {
+        display: block;
+        font-family: "Noto Sans JP", system-ui;
+        font-size: 14px;
+        @include mq {
+        }
+      }
+    }
+
+    &-p {
+      line-height: 2.14;
+      font-size: 14px;
+      font-family: "Noto Serif JP", serif;
+    }
+
+    &-content {
+      flex: 1;
+    }
+
+    &-fig {
+      margin: 0;
+      padding: 0;
+      width: px2per(310, 900);
+      @include mq {
+        width: px2per(383, 670);
+        margin: 0 auto 75px;
+      }
+    }
+  }
+  &-3 {
+    padding: 130px 0 80px;
+    @include mq {
+      padding: 100px 0 0;
+    }
+    &-ttl {
+      text-align: center;
+      font-weight: 900;
+      font-family: "Lato", sans-serif;
+      font-size: 28px;
+      letter-spacing: 0.1em;
+      margin-bottom: 55px;
+      @include mq {
+        font-size: 25px;
+      }
+    }
+    &-ttl-2 {
+      margin-bottom: 15px;
+
+      .en {
+        display: block;
+        font-weight: 700;
+        font-size: 28px;
+        font-family: "Lato", sans-serif;
+        margin-bottom: 15px;
+        text-transform: none;
+
+        @include mq {
+          font-size: 25px;
+        }
+      }
+      .jp {
+        display: block;
+        font-family: "Noto Sans JP", system-ui;
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+    &-p {
+      line-height: 2.14;
+      font-size: 14px;
+      font-family: "Noto Serif JP", serif;
+    }
+    &-sec {
+      background: #000;
+      color: #fff;
+      padding: 50px;
+      @include mq {
+        padding: 60px 20px;
+      }
+    }
+
+    &-layout {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      @include mq {
+        padding: 0;
+        gap: 27px;
+      }
+    }
+    &-1 {
+      width: 100%;
+      &-layout {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 33px;
+
+        gap: 30px;
+
+        @include mq {
+          flex-direction: column-reverse;
+          gap: 25px;
+        }
+      }
+      &-p {
+        font-family: "Noto Sans JP", system-ui;
+        font-size: 14px;
+        line-height: 2.14;
+      }
+      &-content {
+        flex: 1;
+      }
+      &-fig {
+        margin: 0;
+        padding: 0;
+        width: px2per(400, 1240);
+        @include mq {
+          width: 100%;
+        }
+      }
+      &-step {
+        display: flex;
+        gap: px2per(40, 1240);
+
+        list-style: none;
+        margin: 0 0 25px;
+
+        @include mq {
+          flex-direction: column;
+          gap: 43px;
+          margin: 0 0 45px;
+        }
+        &-item {
+          background: #fff;
+          color: #000;
+          padding: 22px;
+          flex: 1;
+          position: relative;
+          &::after {
+            content: "";
+            display: block;
+            width: 13px;
+            height: 19px;
+            background: url(page-about-arrow.png) no-repeat center;
+            background-size: contain;
+            @include centerer(false, true);
+            right: -10%;
+
+            @include mq {
+              width: 19px;
+              height: 13px;
+              background: url(page-about-arrow-sp.png) no-repeat center;
+              background-size: contain;
+              @include centererKill;
+              @include centerer(true, false);
+              bottom: -40px;
+            }
+          }
+          &:last-child {
+            &::after {
+              display: none;
+            }
+          }
+        }
+        &-ttl {
+          text-transform: lowercase;
+          text-align: center;
+          font-weight: 700;
+          font-family: "Lato", sans-serif;
+          letter-spacing: 0.1em;
+          font-size: 22px;
+          padding-bottom: 20px;
+          margin-bottom: 20px;
+          border-bottom: 1px solid #000;
+          line-height: 1;
+          @include mq {
+            font-size: 20px;
+          }
+        }
+        &-ttl-2 {
+          text-align: center;
+          font-family: "Noto Sans JP", system-ui;
+          font-size: 14px;
+          margin-bottom: 20px;
+          line-height: 1.5;
+          @include mq {
+            font-size: 18px;
+          }
+        }
+        &-p {
+          font-family: "Noto Sans JP", system-ui;
+          font-size: 14px;
+          line-height: 2.14;
+          margin-bottom: 20px;
+        }
+      }
+    }
+    &-2 {
+      width: calc(calc(100% - 22px) / 2);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include mq {
+        width: 100%;
+      }
+      &-fig {
+        width: px2per(400, 660);
+        margin: 0 auto 30px;
+        @include mq {
+          width: 100%;
+        }
+      }
+      .mga-page-about-3-p {
+        flex: 1;
+      }
+    }
+  }
+}

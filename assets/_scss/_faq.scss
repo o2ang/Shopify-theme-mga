@@ -1,0 +1,44 @@
+.mga-faq {
+  &-ttl {
+    font-size: 28px;
+    letter-spacing: 0.1em;
+  }
+  &-item {
+    margin-bottom: 6px;
+    button {
+      //border: 1px solid #000;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &-q {
+    font-weight: 700;
+    font-size: 18px;
+  }
+  &-a-wrap {
+    padding: 5px 0 0 40px;
+  }
+  &-a {
+    line-height: 2.14;
+    padding-bottom: 50px !important;
+  }
+}
+
+html[lang="ja"] {
+  .mga-faq {
+    &-ttl {
+      font-family: "Noto Serif JP", serif;
+      font-weight: 600;
+      letter-spacing: 0;
+    }
+
+    &-q {
+      font-family: "Noto Sans JP", system-ui, "sans-serif";
+    }
+    &-a {
+      font-family: "Noto Sans JP", system-ui, "sans-serif";
+    }
+  }
+}

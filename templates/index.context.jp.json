@@ -1,0 +1,13 @@
+{
+  "parent": "index.json",
+  "context": {
+    "market": "jp"
+  },
+  "sections": {
+    "mga_for_gift_DnRXwL": {
+      "settings": {
+        "button_link": "shopify:\/\/collections\/for-gift_"
+      }
+    }
+  }
+}

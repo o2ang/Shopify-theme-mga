@@ -1,0 +1,131 @@
+{
+  "sections": {
+    "collection-header": {
+      "type": "collection-header",
+      "settings": {
+        "enable": true,
+        "collection_image_enable": false,
+        "parallax": false,
+        "parallax_direction": "left"
+      }
+    },
+    "main-collection": {
+      "type": "main-collection",
+      "blocks": {
+        "collection_description": {
+          "type": "collection_description",
+          "settings": {}
+        },
+        "subcollections": {
+          "type": "subcollections",
+          "disabled": true,
+          "settings": {
+            "subcollections_per_row": 5
+          }
+        },
+        "product_grid": {
+          "type": "product_grid",
+          "settings": {
+            "enable_collection_count": true,
+            "per_row": 4,
+            "rows_per_page": 7,
+            "mobile_flush_grid": false
+          }
+        }
+      },
+      "block_order": [
+        "collection_description",
+        "subcollections",
+        "product_grid"
+      ],
+      "settings": {
+        "enable_sidebar": true,
+        "collapsed": true,
+        "filter_style": "drawer",
+        "enable_color_swatches": true,
+        "enable_sort": true
+      }
+    },
+    "promo-grid": {
+      "type": "promo-grid",
+      "blocks": {
+        "banner": {
+          "type": "banner",
+          "disabled": true,
+          "settings": {
+            "heading": "Banner promotion",
+            "text": "",
+            "link": "",
+            "label": "Shop now",
+            "color_tint": "#e95454",
+            "color_tint_opacity": 8,
+            "framed": false
+          }
+        },
+        "advanced": {
+          "type": "advanced",
+          "disabled": true,
+          "settings": {
+            "subheading": "Limited time",
+            "heading": "Announce your promotion",
+            "textarea": "WEAR AS YOU WANT",
+            "cta_text1": "Shop This",
+            "cta_link1": "",
+            "cta_text2": "Shop All",
+            "cta_link2": "",
+            "video_url": "",
+            "width": "100",
+            "height": 500,
+            "text_size": 120,
+            "text_align": "vertical-center horizontal-center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "banner",
+        "advanced"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": true,
+        "space_below": false,
+        "lazyload_images": true
+      }
+    },
+    "1723710404894f2180": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_JgNzyR": {
+          "type": "shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "FOLLOW US",
+            "title_color": "",
+            "alignment": "center",
+            "margin_top": 0,
+            "margin_bottom": 0,
+            "background_color": "#f9f9f9",
+            "html_area": "<style type=\"text\/css\">\n.shopify-app-block{\npadding: 75px 0;\n}\nh2{\n    font-family: \"Lato\", sans-serif;\nfont-w\n}\n<\/style>"
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_JgNzyR"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    }
+  },
+  "order": [
+    "collection-header",
+    "main-collection",
+    "promo-grid",
+    "1723710404894f2180"
+  ]
+}

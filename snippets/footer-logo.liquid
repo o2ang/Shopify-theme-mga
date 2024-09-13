@@ -1,0 +1,10 @@
+{%- if block.settings.logo -%}
+  <div class="mga-footer__logo">
+    <a href="{{ routes.root_url }}">
+      <picture>
+        <source srcset="{{ block.settings.logo_sp | image_url }}" media="(max-width: 768px)">
+        <img src="{{ block.settings.logo | image_url }}" alt="">
+      </picture>
+    </a>
+  </div>
+{%- endif -%}

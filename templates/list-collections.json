@@ -1,0 +1,139 @@
+{
+  "sections": {
+    "main": {
+      "type": "list-collections-template",
+      "blocks": {
+        "collection_LENArE": {
+          "type": "collection",
+          "settings": {
+            "collection": "plain-cornice-stole"
+          }
+        },
+        "collection_mxKRwT": {
+          "type": "collection",
+          "settings": {
+            "collection": "coat-stole"
+          }
+        },
+        "collection_8EBLtm": {
+          "type": "collection",
+          "settings": {
+            "collection": "jacket-stole"
+          }
+        },
+        "collection_zb6EKX": {
+          "type": "collection",
+          "settings": {
+            "collection": "angel-stole"
+          }
+        },
+        "collection_nLhWQD": {
+          "type": "collection",
+          "settings": {
+            "collection": "hybrid-poncho"
+          }
+        },
+        "collection_t4bUxk": {
+          "type": "collection",
+          "settings": {
+            "collection": "shawl"
+          }
+        },
+        "collection_y7DipY": {
+          "type": "collection",
+          "settings": {
+            "collection": "scarves"
+          }
+        },
+        "collection_UCHiEd": {
+          "type": "collection",
+          "settings": {
+            "collection": "one-piece"
+          }
+        },
+        "collection_MNqjab": {
+          "type": "collection",
+          "settings": {
+            "collection": "bag"
+          }
+        }
+      },
+      "block_order": [
+        "collection_LENArE",
+        "collection_mxKRwT",
+        "collection_8EBLtm",
+        "collection_zb6EKX",
+        "collection_nLhWQD",
+        "collection_t4bUxk",
+        "collection_y7DipY",
+        "collection_UCHiEd",
+        "collection_MNqjab"
+      ],
+      "settings": {
+        "title_enable": true,
+        "display_type": "selected",
+        "sort": "date",
+        "grid": "4"
+      }
+    },
+    "logo-list": {
+      "type": "logo-list",
+      "blocks": {
+        "logo1": {
+          "type": "logo_image",
+          "settings": {
+            "link": ""
+          }
+        },
+        "logo2": {
+          "type": "logo_image",
+          "settings": {
+            "link": ""
+          }
+        },
+        "logo3": {
+          "type": "logo_image",
+          "settings": {
+            "link": ""
+          }
+        },
+        "logo4": {
+          "type": "logo_image",
+          "settings": {
+            "link": ""
+          }
+        },
+        "logo5": {
+          "type": "logo_image",
+          "settings": {
+            "link": ""
+          }
+        },
+        "logo6": {
+          "type": "logo_image",
+          "settings": {
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo1",
+        "logo2",
+        "logo3",
+        "logo4",
+        "logo5",
+        "logo6"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Our brands",
+        "logo_opacity": 76,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "logo-list"
+  ]
+}

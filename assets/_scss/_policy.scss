@@ -1,0 +1,105 @@
+.shopify-policy__container {
+  max-width: 1000px !important;
+  padding: 125px 50px !important;
+
+  @include mq {
+    padding: 62px 25px !important;
+  }
+
+  h1 {
+    margin-bottom: 100px;
+    font-size: 28px;
+    letter-spacing: 0.1em;
+    font-weight: 900;
+    @include mq {
+      margin-bottom: 45px;
+    }
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 80px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+
+    text-transform: none;
+    @include mq {
+      margin-top: 45px;
+    }
+    span {
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+
+  h3 {
+    font-size: 14px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    line-height: 1.2;
+    text-transform: none;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+
+    font-size: 14px;
+    line-height: 2.14;
+    font-weight: 400;
+    h3 {
+      font-weight: 700;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 2.14;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+
+  .note {
+    margin-top: 50px;
+    font-size: 12px;
+    padding: 0;
+    border: none;
+    line-height: 1.5;
+  }
+
+  .shipping {
+    h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-top: 50px;
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+  }
+}
+
+html[lang="ja"] {
+  .shopify-policy__container {
+    font-family: "Noto Sans JP", system-ui !important;
+    h1 {
+      font-family: "Noto Serif JP", serif;
+      font-weight: 600;
+    }
+    h2 {
+      font-family: "Noto Sans JP", system-ui !important;
+    }
+    h3 {
+      font-family: "Noto Sans JP", system-ui !important;
+    }
+
+    ul,
+    p {
+      font-weight: 400;
+    }
+  }
+}

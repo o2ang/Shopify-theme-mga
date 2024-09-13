@@ -1,0 +1,39 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "mga_page_about_Ta3hnf": {
+      "type": "mga-page-about",
+      "blocks": {
+        "heading_nxAJqD": {
+          "type": "heading",
+          "settings": {
+            "title": "Rich text"
+          }
+        },
+        "text_9Ee4BY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_nxAJqD",
+        "text_9Ee4BY"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "mga_page_about_Ta3hnf"
+  ]
+}

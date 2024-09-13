@@ -1,0 +1,380 @@
+{%- liquid
+  assign show_selectors = false
+  assign currency_selector = false
+  assign locale_selector = false
+
+  if section.settings.show_currency_selector and shop.enabled_currencies.size > 1
+    assign currency_selector = true
+  endif
+
+  if section.settings.show_locale_selector and shop.enabled_locales.size > 1
+    assign locale_selector = true
+  endif
+
+  if currency_selector or locale_selector
+    assign show_selectors = true
+  endif
+-%}
+
+{%- if settings.color_footer == settings.color_body_bg -%}
+  {%- style -%}
+    .site-footer {
+      border-top: 1px solid {{ settings.color_borders }};
+    }
+  {%- endstyle -%}
+{%- endif -%}
+
+<footer class="mga-footer site-footer" data-section-id="{{ section.id }}" data-section-type="footer-section">
+  <div class="page-width">
+    <div class="mga-footer-layout1">
+      <h4 class="mga-footer-ttl mga-footer-layout1-ttl js-collapsible">PRODUCTS</h4>
+      <ul class="mga-footer-menu-product">
+        {% for link in linklists['mga-footer-menu-product'].links %}
+          <li class="mga-footer-menu-product-item">
+            <h5>
+              <a href="{{ link.url }}">{{ link.title }}</a>
+            </h5>
+            {% if link.links.size > 0 %}
+              <ul>
+                {% for level2 in link.links %}
+                  <li class="level2">
+                    <a href="{{ level2.url }}">{{ level2.title }}</a>
+                    {% if level2.links.size > 0 %}
+                      <ul>
+                        {% for level3 in level2.links %}
+                          <li class="level3">
+                            <a href="{{ level3.url }}">{{ level3.title }}</a>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="mga-footer-layout2 ">
+      <div class="mga-footer-layout2-menu">
+        <div class="mga-footer-layout2-menu-item">
+          <h4 class="mga-footer-ttl js-collapsible">POLICYS</h4>
+          <ul class="mga-footer-menu">
+            {% for link in linklists['mga-footer-menu-policys'].links %}
+              <li class="mga-footer-menu-item">
+                <a href="{{ link.url }}">{{ link.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="mga-footer-layout2-menu-item">
+          <h4 class="mga-footer-ttl js-collapsible">HELP</h4>
+          <ul class="mga-footer-menu">
+            {% for link in linklists['mga-footer-menu-help'].links %}
+              <li class="mga-footer-menu-item">
+                <a href="{{ link.url }}">{{ link.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="mga-footer-layout2-menu-item mga-footer-official_web-link">
+          <a
+            href="https://www.michailgkinis.com/"
+            target="_blank"
+            class="mga-footer-ttl mga-footer-ttl-link_blank"
+            >OFFICIAL WEB</a
+          >
+        </div>
+      </div>
+      {%- assign row_width = 0 -%}
+      {%- for block in section.blocks -%}
+        {%- assign row_width = row_width | plus: block.settings.container_width -%}
+        {%- if row_width > 100 -%}
+          <div class="footer__clear small--hide"></div>
+          {%- assign row_width = row_width | minus: 100 -%}
+        {%- endif -%}
+
+        <div
+          {{ block.shopify_attributes }}
+          data-type="{{ block.type }}"
+        >
+          {%- liquid
+            case block.type
+              when 'logo_social'
+                render 'footer-logo', block: block
+              when 'custom'
+                render 'footer-custom-text', block: block, container_width: block.settings.container_width
+              when 'newsletter'
+                render 'footer-newsletter', block: block
+              when 'menu'
+                render 'footer-menu', block: block
+              when 'follow_shop_cta'
+                render 'follow-shop-cta', block: block
+            endcase
+          -%}
+        </div>
+      {%- endfor -%}
+    </div>
+
+    <div class="mga-footer-layout3">
+      {%- if show_selectors -%}
+        <div class="footer__section">
+          {%- render 'multi-selectors',
+            locale_selector: locale_selector,
+            currency_selector: currency_selector,
+            show_currency_flags: section.settings.show_currency_flags,
+            location: 'footer'
+          -%}
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.show_payment_icons -%}
+        {%- unless shop.enabled_payment_types == empty -%}
+          <ul class="inline-list payment-icons footer__section">
+            {%- for type in shop.enabled_payment_types -%}
+              <li class="icon--payment">
+                {{ type | payment_type_svg_tag }}
+              </li>
+            {%- endfor -%}
+          </ul>
+        {%- endunless -%}
+      {%- endif -%}
+
+      {%- if section.settings.show_copyright -%}
+        <p class="mga-footer-copyright">
+          &copy; {{ 'now' | date: '%Y' }}
+          {{ shop.name }}
+          {%- if section.settings.copyright_text != blank -%}
+            {{ section.settings.copyright_text }}
+          {%- endif -%}
+        </p>
+      {%- endif -%}
+      <p class="mga-footer-note {{ request.locale.iso_code }}">
+        {%- if request.locale.iso_code == 'ja' -%}
+          当サイトのテキスト・画像の無断転載・複製を固く禁じます。
+        {%- elsif request.locale.iso_code == 'en' -%}
+          Unauthorized copying and replication of the contents <br class="sp">
+          of this site, text and images are strictly prohibited.
+        {%- endif -%}
+      </p>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "t:sections.footer.name",
+  "max_blocks": 12,
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.header_language_selector",
+      "info": "t:sections.footer.settings.header_language_selector"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_locale_selector",
+      "label": "t:sections.footer.settings.show_locale_selector.label",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.header_currency_selector",
+      "info": "t:sections.footer.settings.header_currency_selector"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_currency_selector",
+      "label": "t:sections.footer.settings.show_currency_selector.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_currency_flags",
+      "label": "t:sections.footer.settings.show_currency_flags.label",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.header_additional_footer_content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_payment_icons",
+      "label": "t:sections.footer.settings.show_payment_icons.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_copyright",
+      "label": "t:sections.footer.settings.show_copyright.label"
+    },
+    {
+      "type": "text",
+      "id": "copyright_text",
+      "label": "t:sections.footer.settings.copyright_text.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "logo_social",
+      "name": "t:sections.footer.blocks.logo.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "t:sections.footer.blocks.logo.settings.logo.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "logo_sp",
+          "label": "Logo image (mobile)"
+        }
+      ]
+    },
+    {
+      "type": "menu",
+      "name": "t:sections.footer.blocks.navigation.name",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_footer_title",
+          "label": "t:sections.footer.blocks.navigation.settings.show_footer_title.label"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "t:sections.footer.blocks.navigation.settings.menu.label",
+          "default": "footer",
+          "info": "t:sections.footer.blocks.navigation.settings.menu.info"
+        },
+        {
+          "type": "range",
+          "id": "container_width",
+          "label": "t:sections.footer.blocks.navigation.settings.container_width.label",
+          "default": 25,
+          "min": 15,
+          "max": 95,
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "type": "newsletter",
+      "name": "t:sections.footer.blocks.newsletter_and_social.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_footer_title",
+          "label": "t:sections.footer.blocks.newsletter_and_social.settings.show_footer_title.label",
+          "default": true
+        },
+        {
+          "type": "paragraph",
+          "content": "t:sections.footer.blocks.newsletter_and_social.settings.content"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.footer.blocks.newsletter_and_social.settings.title.label",
+          "default": "Sign up and save"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:sections.footer.blocks.newsletter_and_social.settings.text.label",
+          "info": "t:sections.footer.blocks.newsletter_and_social.settings.text.info",
+          "default": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>"
+        },
+        {
+          "type": "range",
+          "id": "container_width",
+          "label": "t:sections.footer.blocks.newsletter_and_social.settings.container_width.label",
+          "default": 25,
+          "min": 15,
+          "max": 95,
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "type": "custom",
+      "name": "t:sections.footer.blocks.custom_text.name",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_footer_title",
+          "label": "t:sections.footer.blocks.custom_text.settings.show_footer_title.label",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.footer.blocks.custom_text.settings.title.label",
+          "default": "Custom text"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.footer.blocks.custom_text.settings.image.label"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:sections.footer.blocks.custom_text.settings.text.label",
+          "default": "<p>Add your own custom text here.</p>"
+        },
+        {
+          "type": "range",
+          "id": "container_width",
+          "label": "t:sections.footer.blocks.custom_text.settings.container_width.label",
+          "default": 25,
+          "min": 15,
+          "max": 95,
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "type": "follow_shop_cta",
+      "name": "t:common.follow_shop_cta.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "t:common.follow_shop_cta.paragraph.content"
+        },
+        {
+          "type": "range",
+          "id": "container_width",
+          "label": "t:sections.footer.blocks.custom_text.settings.container_width.label",
+          "default": 25,
+          "min": 20,
+          "max": 95,
+          "unit": "%"
+        }
+      ]
+    }
+  ],
+  "default": {
+    "settings": {},
+    "blocks": [
+      {
+        "type": "menu",
+        "settings": {}
+      },
+      {
+        "type": "logo_social",
+        "settings": {}
+      }
+    ]
+  },
+  "disabled_on": {
+    "groups": ["header", "custom.popups"]
+  }
+}
+{% endschema %}

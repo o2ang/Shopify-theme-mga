@@ -1,0 +1,56 @@
+.waypoint {
+  //border: 1px solid blue;
+}
+
+.mga-fadein {
+  opacity: 0;
+  @include transition("opacity 0.5s ease");
+  &.show {
+    opacity: 1;
+  }
+
+  //
+  &--bottom_top {
+    @include transition("opacity 0.5s ease, transform 0.5s ease");
+    opacity: 0;
+
+    @include transform(translateY(100px));
+    &.show {
+      opacity: 1;
+      @include transform(translateY(0));
+    }
+  }
+
+  &--right_left {
+    @include transition("opacity 0.5s ease, transform 0.5s ease");
+    opacity: 0;
+
+    @include transform(translateX(100px));
+    &.show {
+      opacity: 1;
+      @include transform(translateX(0));
+    }
+  }
+
+  &--left_right {
+    @include transition("opacity 0.5s ease, transform 0.5s ease");
+    opacity: 0;
+
+    @include transform(translateX(-100px));
+    &.show {
+      opacity: 1;
+      @include transform(translateX(0));
+    }
+  }
+
+  &--zoom_out {
+    @include transition("opacity 0.5s ease, transform 0.5s ease");
+    opacity: 0;
+
+    @include transform(scale(1.2));
+    &.show {
+      opacity: 1;
+      @include transform(scale(1));
+    }
+  }
+}

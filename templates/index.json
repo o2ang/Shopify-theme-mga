@@ -1,0 +1,296 @@
+{
+  "sections": {
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slideshow-0": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "MICHAIL GKINIS AOYAMA",
+            "title": "WEARABLE ART",
+            "title_size": 80,
+            "subheading": "JAPANESE CRAFTSMANSHIP",
+            "link": "shopify:\/\/collections\/coat-stole",
+            "link_text": "Shop this",
+            "link_2": "shopify:\/\/collections",
+            "link_text_2": "Shop all",
+            "color_accent": "#000000",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify:\/\/shop_images\/SS2020-Temple-2860-2_s.jpg",
+            "parallax_direction": "left",
+            "overlay_opacity": 0
+          }
+        },
+        "slideshow-1": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "PLAIN CORNICE STOLE",
+            "title_size": 80,
+            "subheading": "着るアートストール",
+            "link": "shopify:\/\/collections\/plain-cornice-stole",
+            "link_text": "SHOP THIS",
+            "link_2": "shopify:\/\/collections",
+            "link_text_2": "SHOP ALL",
+            "color_accent": "#000000",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify:\/\/shop_images\/SS2020-Temple-2840-2_s_56bcf8c7-842a-42d9-a3db-03d1242814f6.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "slideshow-0",
+        "slideshow-1"
+      ],
+      "settings": {
+        "section_height": "750px",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "lazyload_images": true
+      }
+    },
+    "mga_rich_text_dQV6mw": {
+      "type": "mga-rich-text",
+      "blocks": {
+        "heading_mkXhhR": {
+          "type": "heading",
+          "settings": {
+            "title": "WEARABLE ART STOLE"
+          }
+        },
+        "text_fqRGRc": {
+          "type": "text",
+          "settings": {
+            "text": "<p class=\"en\">\"Michail Gkinis Aoyama clothing <br class=\"sp\">is a testament to versatility,<br>\ninviting you to explore countless ways <br class=\"sp\">of self-expression.<br>\nIt's not just about one garment;<br>\nit's about the limitless possibilities it holds.<br>\nOur creations transcend the confines <br class=\"sp\">of body type and gender,<br>\nfocusing instead on bringing<br class=\"sp\"> out the individual's best self.<br>\nRather than conforming to the body's shape,<br>\nour garments adapt to your mood and desires.\"<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_mkXhhR",
+        "text_fqRGRc"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "mga_featured_collection_swiper_3QXBwg": {
+      "type": "mga-featured-collection-swiper",
+      "settings": {
+        "title": "NEW ARRIVALS",
+        "home_featured_products": "new",
+        "per_row": 10
+      }
+    },
+    "mga_featured_collections_jcKkG9": {
+      "type": "mga-featured-collections",
+      "blocks": {
+        "collection_NMt4aw": {
+          "type": "collection",
+          "settings": {
+            "collection": "angel-stole",
+            "title": "ANGEL STOLE",
+            "title-jp": "エンジェルストール",
+            "discription": "Theyupgrade you just by wearing one piece <br>with a simple outfit,",
+            "focal_point": "center center"
+          }
+        },
+        "collection_q4HAUy": {
+          "type": "collection",
+          "settings": {
+            "collection": "coat-stole",
+            "title": "COAT STOLE",
+            "title-jp": "コートストール［Registered Design］",
+            "discription": "DFA AWARD2021 Prize<br>\nTransforms into a coat, blouson, gilet, etc. <br>\nwith five zips, a free form that transcends boundaries",
+            "focal_point": "center center"
+          }
+        },
+        "collection_ehaNgd": {
+          "type": "collection",
+          "settings": {
+            "collection": "plain-cornice-stole",
+            "title": "PLAIN CORNICE STOLE",
+            "title-jp": "プレインコーニスストール［Registered Design］",
+            "discription": "Creative tools for expressing individuality<br>\nA stole that can be worn like a piece of clothing, changing in many ways with a single piece.<br> It can also be used for interior decoration.",
+            "focal_point": "center center"
+          }
+        },
+        "collection_M8TENh": {
+          "type": "collection",
+          "settings": {
+            "collection": "hybrid-poncho",
+            "title": "HYBRID PONCHO",
+            "title-jp": "ハイブリッドポンチョ",
+            "discription": "Mix of various textures,<br> accessories that can be worn",
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "collection_NMt4aw",
+        "collection_q4HAUy",
+        "collection_ehaNgd",
+        "collection_M8TENh"
+      ],
+      "settings": {
+        "title": "WEARABLE ART STOLE",
+        "divider": false,
+        "per_row": 2,
+        "enable_gutter": true,
+        "collection_grid_shape": "square",
+        "collection_grid_image": "collection",
+        "collection_grid_text_align": "bottom-left"
+      }
+    },
+    "mga_for_gift_DnRXwL": {
+      "type": "mga-for_gift",
+      "settings": {
+        "title": "FOR GIFT",
+        "text": "<p class=\"en\">The one and only [Wearable Art Stole] <br>by MICHAIL GKINIS AOYAMA <br class=\"sp\">is great gifts for a loved one, <br>You can choose from a wide range of variations.<\/p>",
+        "button_link": "shopify:\/\/collections\/for-gift_",
+        "image": "shopify:\/\/shop_images\/home-gift.jpg",
+        "image_sp": "shopify:\/\/shop_images\/home-gift_sp.jpg",
+        "height": 450,
+        "lazyload_images": true
+      }
+    },
+    "featured_collections_MhqFcT": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_Dkafhx": {
+          "type": "collection",
+          "settings": {
+            "collection": "trip",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "collection_JTAAnt": {
+          "type": "collection",
+          "settings": {
+            "collection": "party",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "collection_iRMDUG": {
+          "type": "collection",
+          "settings": {
+            "collection": "dinner",
+            "title": "",
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "collection_Dkafhx",
+        "collection_JTAAnt",
+        "collection_iRMDUG"
+      ],
+      "settings": {
+        "title": "SHOP BY SCENE",
+        "divider": false,
+        "per_row": 3,
+        "enable_gutter": true,
+        "collection_grid_shape": "square",
+        "collection_grid_image": "collection",
+        "collection_grid_text_align": "center"
+      }
+    },
+    "mga_featured_collection_V3rt6F": {
+      "type": "mga-featured-collection",
+      "settings": {
+        "title": "SEASONAL RECOMENDED",
+        "home_featured_products": "seasonal-recomended",
+        "per_row": 3,
+        "rows": 1,
+        "mobile_scrollable": false,
+        "view_all": false,
+        "divider": false,
+        "product_grid_image_size": "square"
+      }
+    },
+    "featured_collections_jXf6KM": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_79cFyd": {
+          "type": "collection",
+          "settings": {
+            "collection": "coat-stole",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "collection_AkdfJW": {
+          "type": "collection",
+          "settings": {
+            "collection": "angel-stole",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "collection_ABcqUf": {
+          "type": "collection",
+          "settings": {
+            "collection": "scarf-snood",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "collection_czPdLF": {
+          "type": "collection",
+          "settings": {
+            "collection": "shawl",
+            "title": "",
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "collection_79cFyd",
+        "collection_AkdfJW",
+        "collection_ABcqUf",
+        "collection_czPdLF"
+      ],
+      "settings": {
+        "title": "PICK UP",
+        "divider": false,
+        "per_row": 4,
+        "enable_gutter": true,
+        "collection_grid_shape": "portrait",
+        "collection_grid_image": "collection",
+        "collection_grid_text_align": "center"
+      }
+    },
+    "mga_atelier_shop_Cm4bfP": {
+      "type": "mga-atelier_shop",
+      "settings": {
+        "custom_text_title": "ATELIER SHOP",
+        "custom_text_body": "<h3 class=\"mga-atelier_shop-name\"><span class=\"mga-atelier_shop-name-en\">MICHAIL GKINIS AOYAMA<\/span><\/h3>\n<p class=\"mga-atelier_shop-p mga-atelier_shop-address\">1A 4-5-9Todoroki Setagaya-ku Tokyo <a href=\"https:\/\/maps.app.goo.gl\/qLT572RAL3Nz36nHA\" class=\"mga-atelier_shop-gmap\" target=\"_blank\">Google Map<\/a><\/p>\n<p class=\"mga-atelier_shop-p mga-atelier_shop-tel\">TEL:+81-(0)368098540<br>\n\tFAX:+81-(0)368098541<\/p>\n<p class=\"mga-atelier_shop-p mga-atelier_shop-mail\">MAIL: info@michailgkinis.com<\/p>\n<p class=\"mga-atelier_shop-p mga-atelier_shop-info\">Hours of Operation:<br>\n- OPEN: 13:00 - 19:00<br>\n- *Morning and after 19:00, Sunday visits available by reservation.<br>\nClosed on Mondays<\/p>\n<p class=\"mga-atelier_shop-p mga-atelier_shop-note\">*For special business dates and irregular hours, please refer to our <a href=\"\">NEWS section<\/a>.<\/p>",
+        "image": "shopify:\/\/shop_images\/atelier_shop.jpg",
+        "button1_label": "SERVICE",
+        "button1_link": "\/pages\/about\/#service",
+        "button2_label": "RESERVATION",
+        "button2_link": "https:\/\/airrsv.net\/mga\/calendar",
+        "lazyload_images": true
+      }
+    }
+  },
+  "order": [
+    "slideshow",
+    "mga_rich_text_dQV6mw",
+    "mga_featured_collection_swiper_3QXBwg",
+    "mga_featured_collections_jcKkG9",
+    "mga_for_gift_DnRXwL",
+    "featured_collections_MhqFcT",
+    "mga_featured_collection_V3rt6F",
+    "featured_collections_jXf6KM",
+    "mga_atelier_shop_Cm4bfP"
+  ]
+}

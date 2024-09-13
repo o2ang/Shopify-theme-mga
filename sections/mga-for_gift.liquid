@@ -1,0 +1,106 @@
+<div
+  data-section-id="{{ section.id }}"
+  data-section-type="background-image"
+  class="mga-for_gift background-media-text background-media-text--{{ section.id }} background-media-text--{{ section.settings.height }} loaded"
+  data-aos="background-media-text__animation"
+>
+  {%- if section.settings.button_link != blank -%}
+    <a href="{{ section.settings.button_link }}" class="mga-for_gift__link">
+  {%- endif -%}
+  <div class="mga-for_gift__bg background-media-text__container waypoint mga-fadein--zoom_out">
+    {%- if section.settings.image != blank -%}
+      {% assign classes = 'image-fit background-media-text__image background-media-text__image--'
+        | append: section.id
+      %}
+      <picture>
+        <source srcset="{{ section.settings.image_sp | image_url }}" media="(max-width: 768px)">
+        <img src="{{ section.settings.image | image_url }}" alt="">
+      </picture>
+    {%- else -%}
+      {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+    {%- endif -%}
+  </div>
+
+  {%- if section.settings.title != blank or section.settings.text != blank -%}
+    <div class="mga-for_gift__inner background-media-text__inner">
+      <div class="mga-for_gift__text">
+        <div class="waypoint mga-fadein--left_right">
+          {%- if section.settings.title != blank -%}
+            <h3 class="mga-for_gift__ttl">{{ section.settings.title | escape }}</h3>
+          {%- endif -%}
+          {%- if section.settings.text != blank -%}
+            <div class="mga-for_gift__p">{{ section.settings.text }}</div>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+</div>
+{%- if section.settings.button_link != blank -%}
+  </a>
+{%- endif -%}
+<div class="background-media-text__spacer background-media-text--{{ section.settings.height }}"></div>
+
+{% schema %}
+{
+  "name": "MGA FOR GIFT",
+  "class": "index-section--flush",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.background-image-text.settings.title.label",
+      "default": "Large image with text box"
+    },
+    {
+      "type": "html",
+      "id": "text",
+      "label": "HTML",
+      "default": "<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.</p>"
+    },
+
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "link"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.background-image-text.settings.image.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_sp",
+      "label": "Image (mobile)"
+    },
+
+    {
+      "type": "range",
+      "id": "height",
+      "label": "t:sections.background-image-text.settings.height.label",
+      "default": 550,
+      "min": 450,
+      "max": 750,
+      "step": 100,
+      "unit": "px"
+    },
+
+    {
+      "type": "checkbox",
+      "id": "lazyload_images",
+      "label": "t:common.lazyload_images.label",
+      "info": "t:common.lazyload_images.info",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "MGA FOR GIFT"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["footer", "header", "custom.popups"]
+  }
+}
+{% endschema %}

@@ -1,0 +1,50 @@
+{
+  "blogs": {
+    "article": {
+      "view_all": "全てを見る",
+      "tags": "タグ",
+      "read_more": "続きを読む",
+      "back_to_blog": "{{ title }}に戻る"
+    },
+    "comments": {
+      "title": "コメントを残す",
+      "name": "お名前",
+      "email": "E-mail",
+      "message": "メッセージ",
+      "post": "コメント",
+      "moderated": "コメントは承認後、投稿されます。",
+      "success_moderated": "コメントは投稿されました。",
+      "success": "コメントは投稿されました。",
+      "with_count": {
+        "one": "コメント{{ count }}",
+        "other": "コメント{{ count }}"
+      }
+    }
+  },
+  "cart": {
+    "general": {
+      "title": "カート",
+      "remove": "削除",
+      "note": "オーダーノート",
+      "subtotal": "小計",
+      "discounts": "割引",
+      "shipping_at_checkout": "送料、税、割引コードはご購入ボタン後に計算されます。",
+      "update": "カートを更新する。",
+      "checkout": "ご購入",
+      "empty": "カートが空です。",
+      "continue_browsing_html": "<a href='{{ url }}'>ショッピングを続ける<\/a>",
+      "close_cart": "カートを閉じる",
+      "reduce_quantity": "数を減らす",
+      "increase_quantity": "数を増やす",
+      "terms": " ご利用規約に同意します。",
+      "terms_html": "<a href='{{ url }}' target='_blank'>ご利用規約<\/a>に同意します。",
+      "terms_confirm": "ご購入に際して、ご利用規約にご同意いただく必要がございます。",
+      "max_quantity": "{{ title }}は {{ quantity }}までのご購入が可能です。"
+    },
+    "label": {
+      "price": "価格",
+      "quantity": "数",
+      "total": "合計"
+    }
+  }
+}

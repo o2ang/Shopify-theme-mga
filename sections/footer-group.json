@@ -1,0 +1,91 @@
+{
+  "type": "footer",
+  "name": "t:sections.footer-group.name",
+  "sections": {
+    "footer-promotions": {
+      "type": "footer-promotions",
+      "blocks": {
+        "footer-promotions-0": {
+          "type": "promotion",
+          "settings": {
+            "enable_image": true,
+            "image_mask": "none",
+            "title": "Site-wide promotion",
+            "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.<\/p>",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        },
+        "footer-promotions-1": {
+          "type": "promotion",
+          "settings": {
+            "enable_image": true,
+            "image_mask": "none",
+            "title": "Site-wide promotion",
+            "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.<\/p>",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        },
+        "footer-promotions-2": {
+          "type": "promotion",
+          "settings": {
+            "enable_image": true,
+            "image_mask": "none",
+            "title": "Site-wide promotion",
+            "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.<\/p>",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "footer-promotions-0",
+        "footer-promotions-1",
+        "footer-promotions-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "hide_homepage": false,
+        "image_size": "wide"
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "footer2": {
+          "type": "newsletter",
+          "settings": {
+            "show_footer_title": true,
+            "title": "Sign up and save",
+            "text": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.<\/p>",
+            "container_width": 33
+          }
+        },
+        "footer-0": {
+          "type": "logo_social",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/footer-logo.png",
+            "logo_sp": "shopify:\/\/shop_images\/footer-logo-sp.png"
+          }
+        }
+      },
+      "block_order": [
+        "footer2",
+        "footer-0"
+      ],
+      "settings": {
+        "show_locale_selector": false,
+        "show_currency_selector": false,
+        "show_currency_flags": false,
+        "show_payment_icons": false,
+        "show_copyright": true,
+        "copyright_text": "| MICHAIL LTD."
+      }
+    }
+  },
+  "order": [
+    "footer-promotions",
+    "footer"
+  ]
+}

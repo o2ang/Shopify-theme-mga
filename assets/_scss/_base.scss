@@ -1,0 +1,27 @@
+br.pc {
+  display: inline;
+  @include mq {
+    display: none;
+  }
+}
+br.sp {
+  display: none;
+  @include mq {
+    display: inline;
+  }
+}
+
+.isense-cc-link {
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.cc-window,
+.cc-window:focus,
+.isense-cc-window,
+.isense-cc-window:focus {
+  border-top: 1px solid #ccc;
+  //filter: drop-shadow(: 0 -3x 2px 0 rgba(0, 0, 0, 0.1));
+}

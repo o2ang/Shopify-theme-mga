@@ -1,0 +1,107 @@
+{%- assign locale = localization.language.iso_code -%}
+<div class="mga-atelier_shop-inner">
+  <div class="mga-atelier_shop-txt">
+    <h2 class="mga-atelier_shop-ttl section-header__title">{{ section.settings.custom_text_title }}</h2>
+    <div class="mga-atelier_shop-content">{{ section.settings.custom_text_body }}</div>
+    <nav class="mga-atelier_shop-nav">
+      {%- if section.settings.button1_label != blank -%}
+        {%- if locale == 'ja' -%}
+          {%- assign url = section.settings.button1_link -%}
+        {%- elsif locale == 'en' -%}
+          {%- assign url = section.settings.button1_link | prepend: '/en' -%}
+        {%- endif -%}
+        <div class="">
+          <a
+            href="{{ url}}"
+            class="c-btn-round-white"
+          >
+            {{ section.settings.button1_label }}
+          </a>
+        </div>
+      {%- endif -%}
+      {%- if section.settings.button2_label != blank -%}
+        <div class="">
+          <a
+            href="{{ section.settings.button2_link }}"
+            class="c-btn-round-white"
+            target="_blank"
+          >
+            {{ section.settings.button2_label }}
+          </a>
+        </div>
+      {%- endif -%}
+    </nav>
+  </div>
+  <figure class="mga-atelier_shop-fig waypoint mga-fadein--zoom_out">
+    {%- if section.settings.image != blank -%}
+      {% assign classes = '' | append: section.id %}
+      {% comment %} Full width image so don't need to adjust sizes attribute, fallback is 100vw {% endcomment %}
+      {%- render 'image-element',
+        img: section.settings.image,
+        loading: section.settings.lazyload_images,
+        classes: classes
+      -%}
+    {%- else -%}
+      {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+    {%- endif -%}
+  </figure>
+</div>
+
+{% schema %}
+{
+  "name": "MGA ATELIER SHOP",
+  "class": "mga-atelier_shop",
+  "settings": [
+    {
+      "id": "custom_text_title",
+      "type": "text",
+      "label": "Text box heading",
+      "default": "Title"
+    },
+    {
+      "id": "custom_text_body",
+      "type": "html",
+      "label": "Add custom text below",
+      "default": "<p>Add your text here</p>"
+    },
+
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.background-image-text.settings.image.label"
+    },
+    {
+      "type": "text",
+      "id": "button1_label",
+      "label": "Button1 label"
+    },
+    {
+      "type": "url",
+      "id": "button1_link",
+      "label": "Button1 link"
+    },
+    {
+      "type": "text",
+      "id": "button2_label",
+      "label": "Button2 label"
+    },
+    {
+      "type": "url",
+      "id": "button2_link",
+      "label": "Button2 link"
+    },
+    {
+      "type": "checkbox",
+      "id": "lazyload_images",
+      "label": "t:common.lazyload_images.label",
+      "info": "t:common.lazyload_images.info",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "MGA ATELIER SHOP"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,179 @@
+
+@function px2vw($size, $viewport:1366){
+	$rate: 100 / $viewport;	
+	@if $size == auto {
+		@return $size ;
+	} @else {
+		@return $rate * $size * 1vw;
+	}
+}
+
+@function px2vw_sp($size, $viewport:375){
+	$rate: 100 / $viewport;	
+	@if $size == auto {
+		@return $size ;
+	} @else {
+		@return $rate * $size * 1vw;
+	}
+}
+
+
+@function px2vh($size, $viewport:666){
+  $rate: 100 / $viewport;	
+	@if $size == auto {
+		@return $size ;
+	 } @else {
+		@return $rate * $size * 1vh;
+	 }
+}
+
+@function px2per($size1, $size2){
+	@return calc($size1 / $size2) * 100%;
+}
+
+@function get_px($size){
+  @return  $size / 1280 * 1024 * 1px;
+}
+
+@function flexWidth($num: 2, $gap: 10px){
+	@return calc( calc( 100% - #{$gap} * ( #{$num} - 1 ))  / #{$num});
+}
+
+
+
+$breakpoints: (
+	'sm': 'screen and (max-width: 375px)',
+	//'md': 'screen and (max-width: 599px) , screen  and (max-width: 923px) and (orientation: landscape)',
+	'md': 'screen and (max-width: 768px)',
+	//'md2': 'screen and (max-width: 960px)',
+	'lg': 'screen and (max-width: 1080px)',
+	'xl': 'screen and (max-width: 1366px)',
+	'xxl': 'screen and (min-width: 1366px)',
+) !default;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin css3($property, $value) {
+     @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+          #{$prefix}#{$property}: #{$value};
+     }
+}
+
+@mixin centerer($horizontal: true, $vertical: true) {
+  position: absolute;
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+	@include css3(transform,translate(-50%, -50%));
+  } @else if ($horizontal) {
+    left: 50%;
+    @include css3(transform,translate(-50%, 0));
+  } @else if ($vertical) {
+    top: 50%;
+	@include css3(transform,translate(0, -50%));
+  
+  }
+}
+
+@mixin centererKill {
+	position: static;
+	top:auto; left: auto; bottom: auto; right: auto;
+	@include css3(transform,translate(0, 0));
+}
+
+
+@mixin clearfix {
+	zoom: 1;
+	&:after {
+		display: table;
+		clear: both;
+		content: "";
+	}
+	&:before {
+		display: table;
+		content: "";
+	}
+}
+@mixin inner {
+	
+	width: 960px;
+	margin: 0 auto;
+	padding: 0 30px;
+	@include mq() {
+		width: 100%;
+		padding: 0 15px;
+	}
+}
+
+@mixin text_hide {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+@mixin transform($str){
+	@include css3(transform, $str)
+}
+
+@mixin transition($str){
+	@include css3(transition, $str)
+}
+
+@mixin radius($str){	
+	@include css3(border-radius, $str)
+}
+@mixin aspect($w: 1, $h: 1, $type : img) {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	&:before {
+		content:"";
+		display: block;
+		padding-top:  $h / $w * 100%;
+	}
+	
+	@if $type == img {
+		img{
+			//@include centerer;
+			width: 100%; height: 100%;
+			object-fit: cover;
+			position: absolute;
+			top:0; left: 0; right: 0; bottom: 0;
+			margin: auto auto;
+		}
+
+	  } @else if $type == iframe {
+		iframe{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+		}
+	  }@else if $type == video {
+		  video{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%!important;
+			height: 100%!important;
+			object-fit: cover;
+
+		}
+	}
+		
+}
+
+	@mixin aspectKill{
+		position: static;
+		overflow: visible;
+		width: auto;
+		&:before {
+			display: none;
+		}
+	}

@@ -1,0 +1,145 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "separator": {
+          "type": "separator",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "sales_point": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "globe",
+            "text": "Free world shipping"
+          }
+        },
+        "sales_point_NjKjhR": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "checkmark",
+            "text": "The product will be shipped 2-3 weeks after the order is placed."
+          }
+        },
+        "inventory_status": {
+          "type": "inventory_status",
+          "settings": {
+            "inventory_threshold": 10,
+            "inventory_transfers_enable": true
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "tab": {
+          "type": "tab",
+          "settings": {
+            "title": "Shipping information",
+            "content": "<p>PRE-ORDER items are planed to be delivered in 2-3 weeks after the order.<\/p>",
+            "page": ""
+          }
+        },
+        "tab_DWYh7t": {
+          "type": "tab",
+          "settings": {
+            "title": "TRYING ON",
+            "content": "<p>You can try on the item at our atelier shop.<\/p><p>MICHAIL GKINIS AOYAMA<br\/>atelier shop<br\/>1A 4-5-9 Todoroki Setagaya Tokyo zip 158-0082<br\/>TEL +81-(0)3-6809-8540<br\/><br\/><a href=\"https:\/\/en.michailgkinis.com\/ateliershop\/\" target=\"_blank\" title=\"https:\/\/en.michailgkinis.com\/ateliershop\/\">more info<\/a><\/p>",
+            "page": ""
+          }
+        },
+        "contact": {
+          "type": "contact",
+          "settings": {
+            "title": "Ask a question",
+            "phone": false
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "price",
+        "separator",
+        "variant_picker",
+        "sales_point",
+        "sales_point_NjKjhR",
+        "inventory_status",
+        "buy_buttons",
+        "description",
+        "tab",
+        "tab_DWYh7t",
+        "contact",
+        "share"
+      ],
+      "settings": {
+        "sku_enable": false,
+        "image_position": "left",
+        "image_size": "medium",
+        "product_zoom_enable": true,
+        "thumbnail_position": "beside",
+        "thumbnail_height": "flexible",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "settings": {
+        "max_width": true
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "product_recommendations_heading": "You may also like",
+        "related_count": 6,
+        "products_per_row": 3
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "settings": {
+        "recent_count": 5
+      }
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "sub",
+    "product-recommendations",
+    "recently-viewed",
+    "collection-return"
+  ]
+}
